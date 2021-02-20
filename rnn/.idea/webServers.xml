@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2ccb22b2-d23b-4d35-8a25-c13ff0ac6e5b" name="rnn-origin-99" url="http://202.38.69.241">
+        <fileTransfer host="202.38.69.241" port="39099" rootFolder="/gdata1/chenzw/darts-origin/rnn" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="39099" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

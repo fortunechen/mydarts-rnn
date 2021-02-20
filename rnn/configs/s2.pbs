@@ -1,0 +1,15 @@
+#PBS    -N  s2
+#PBS    -o  /gdata1/chenzw/darts-origin/rnn/s2-log.out
+#PBS    -e  /gdata1/chenzw/darts-origin/rnn/s2-log.err
+#PBS    -l nodes=1:gpus=1:S
+#PBS    -r y
+cd $PBS_O_WORKDIR
+echo Time is `date`
+echo Directory is $PWD
+echo This job runs on following nodes:
+echo -n "Node:"
+cat $PBS_NODEFILE
+echo -n "Gpus:"
+cat $PBS_GPUFILE
+echo "CUDA_VISIBLE_DEVICES:"$CUDA_VISIBLE_DEVICES
+startdocker -D /gdata1/chenzw -s /gdata1/chenzw/darts-master/rnn/configs/s2.sh  -u "--shm-size=4096M" bit:5000/zenglh-cudnnv6-tf1.3-pytorch0.3.1
